@@ -1,0 +1,258 @@
+:root {
+    --sidebar-width: 15em;
+}
+
+body {
+    font-family: 'tt_norms',Arial,Helvetica,sans-serif;   
+    font-style: normal;    
+    font-weight: 400;   
+    font-size: 16px;   
+    line-height: 1.5;
+    background: #fff;    
+    color: #1c1818;
+    background-color: #f2f2f2;
+}
+
+/*a {
+    color: inherit;
+    text-decoration: inherit;
+} */
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.top-header {
+    display: flex; 
+    justify-content: left;
+    background-color: #cf9a76;
+}
+.logo {
+   margin-top: 1em;
+   height: 5.625em;
+   transition: height 300ms;
+}
+.logo.mini {
+    height: 2em;
+}
+.logo img {
+    height: 100%;
+    width: auto;
+}
+.menu-1 {
+    display: flex; 
+    justify-content: space-between;
+    min-height: 8vh;
+    background-color: tomato;
+}
+
+.menu-1 > ul {
+    display: inline-block;
+    width: 200px;
+    padding: 0 10px;
+}
+
+.menu-1 > ul > li {
+   display: inline-block;
+}
+
+.menu-1 li > a {
+    display: block;
+    padding: 10px;
+ }
+
+ .menu-1 li:hover > a {
+    background-color: black;
+    color: white;
+ }
+
+ .menu-1 ul ul {
+     display: none;
+     position: absolute;
+     top: 100%;
+     left: 0;
+ }
+
+ .menu-1 li:hover > ul {
+     display: block;
+ }
+
+ .menu-1 li {
+     position: relative;
+ }
+
+ .hero-pic {
+    width: 400px; 
+}
+
+.main {
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; */
+}
+
+.banner {
+    display: none;
+}
+
+.left-nav {
+    /* margin: 1em; */
+    background-color: darkslateblue;
+}
+
+
+.left-nav::-webkit-scrollbar {
+    width: 1em;
+}
+
+.left-nav::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+
+  .left-nav::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+  .open-or-close {
+      font-size: 0.75em;
+      line-height: 1;
+    position: absolute;
+    right: -1em;
+    top: 0;
+    height: 100%;
+    width: 1em;
+    background-color: rgba(0,0,0,0.1);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    color: white;
+    text-align: center;
+}
+  .open-or-close:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+ /* .left-nav {
+     display: grid;
+     grid-template-columns: 80% auto;
+ } */
+
+/*.nav {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #c9e1dc;     
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+}
+
+.nav-aside {
+    display: flex;
+    justify-content: space-around;
+    width: 10%;
+}
+
+.logo {
+    width: 300px;
+    height: 200px;
+}
+
+lang-drop {
+    float: left;
+    overflow: hidden; 
+}
+
+.lang-drop,.lang-drop-btn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.lang-drop:hover .lang-drop-btn {
+    background-color: #1c1818;
+}
+
+.lang-drop-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.lang-drop-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.lang-drop-content a:hover {
+    background-color: #ddd; 
+}
+
+.lang-drop:hover .lang-drop-content {
+    display: block;
+}
+*/
+
+
+
+@media screen and (min-width: 50em) {
+    /* .header {
+        position: relative;
+        z-index: 2;
+    } */
+    .banner {
+        display: block;
+        background-image: url('/img/img-01.jpeg');
+        height: 15vw;
+        max-height: 30em;
+        background-position: center center;
+        background-size: cover;
+        transition: margin-left 300ms;
+    }
+    .left-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: var(--sidebar-width);
+        padding-top: 9.125em;
+        min-height: 100vh;
+        transition: padding 300ms, left 300ms;
+    }
+    .left-nav.up {
+        padding-top: 5.5em;
+    }
+    .main.closed .left-nav {
+        left: calc(var(--sidebar-width) * -1);
+    }
+    .products, .banner {
+        margin-left: var(--sidebar-width);
+    }
+    .main.closed .products, .main.closed .banner {
+        margin-left: 0;
+    }
+    .products {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1em;
+        padding: 1em;
+        transition: margin-left 300ms;
+    }
+
+    
+}

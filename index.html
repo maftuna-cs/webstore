@@ -11,158 +11,72 @@
   <link rel="stylesheet" href="css/reset.css"> <!-- You may change this "Reset" to "Normalize" if preferred -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <!-- Material design icons are use below. Remove this line if using other font packs or images. Details on Material Design icons can be found here: https://material.io/resources/icons/ -->
-  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/test.css">
 </head>
 
 <body>
-  <header class="header">
-    <ul class="top-header">
-      <li><a href="#">1</a></li>
-      <li><a href="#">1</a></li>
-    </ul>
+  <header>
+    <h1>WOMEN’S SHOES</h1>
+    <p>The Autumn/Winter 2019 women’s shoe collection. From the Union sneaker to runway pumps with crystal-embellished embroidery.</p>
 
-    <nav class="menu-1">
-      <ul>
-        <li>
-          <a href="#">Category</a>
-          <ul>
-            <li><a href="#">1</a></li>
-            <li><a href="#">1</a></li>
-            <li><a href="#">1</a></li>
-            <li><a href="#">1</a></li>
-            <li><a href="#">1</a></li>
-          </ul>
-        </li>
-        <li><a href="#">About</a></li>
-      </ul>
+    <form class="filters" id="filtersForm">
+      
+      <label for="productName">Search by name:
+        <input type="text" name="find" id="productName">
+      </label>
 
-      <a href="index.html" class="logo"><img src="img/logo-04.svg" alt="Logo La Paire" width="90px" height="90px"
-          viewBox="0 0 54 54"></a>
 
-      <ul>
-        <li><a href="index.html"><img src="img/search.svg" alt="signin logo"></a></li>
-        <li><a href="index.html"><img src="img/account.svg" alt="signin logo"></a></li>
-        <li><a href="index.html"><img src="img/giftcard.svg" alt="giftcard logo"></a></li>
-      </ul>
-    </nav>
+      <label for="categoryName">Category:
+        <select name="categoryName" id="categoryName">
+          <option value="all" selected>All products</option>
+          <option value="boots">Boots</option>
+          <option value="flats">Flats</option>
+          <option value="loafers">Loafers</option>
+          <option value="pumps">Pumps</option>
+          <option value="sneakers">Sneakers</option>
+        </select>
+      </label>
+
+      <label>Heel Height:
+        <label>
+          All<input type="radio" name="semester" value="all" checked>
+        </label>
+        <label>
+          Mid Heel<input type="radio" name="semester" value="Fall 2019">
+        </label>
+        <label>
+          High Heel<input type="radio" name="semester" value="Winter 2020">
+        </label>
+      </label>
+
+
+      <!-- <div>
+        <button type="submit">Filter</button>
+      </div> -->
+    </form>
+
+    <div>
+      <button id="fallProducts">Load Fall 2019</button>
+      <button id="productView">Toggle Layout</button>
+    </div>
   </header>
 
-
-
-  <main class="main">
-    <header class="banner">
-      <!-- Banner image? -->
+  <main>
+    <header>
+      <h2>products <small id="numResults">(5 results)</small></h2>
+      <label for="sortOrder">Sort by:
+        <select name="sort" id="sortOrder" class="sort">
+          <!-- <option value="none" disabled selected>-- Sort by --</option> -->
+          <option value="nameAsc" selected>Name, A to Z</option>
+          <option value="nameDesc">Name, Z to A</option>
+          <option value="weeksAsc">Weeks, Least to Most</option>
+          <option value="weeksDesc">Weeks, Most to Least</option>
+        </select>
+      </label>
     </header>
-
-    <section id="scrollbar" data-simplebar class="left-nav">
-      <div id="openCloseSidebar" class="open-or-close">open/close</div>
-
-      <div>
-        <form>
-          <h2>Filters</h2>
-          <fieldset>
-            <legend>Colour</legend>
-            <ul>
-              <li><input type="checkbox" name="colour" value="black" id="black"> <label for="black">Black</label></li>
-              <li><input type="checkbox" name="colour" value="white" id="white"> <label for="white">White</label></li>
-              <li><input type="checkbox" name="colour" value="grey" id="grey"> <label for="grey">Grey</label></li>
-              <li><input type="checkbox" name="colour" value="red" id="red"> <label for="red">Red</label></li>
-              <li><input type="checkbox" name="colour" value="blue" id="blue"> <label for="blue">Blue</label></li>
-            </ul>
-          </fieldset>
-          <fieldset>
-            <legend>Sizes</legend>
-            <ol>
-              <li><input type="checkbox" name="size" value="xs" id="xs"> <label for="xs">XS</label></li>
-              <li><input type="checkbox" name="size" value="sm" id="sm"> <label for="sm">S</label></li>
-              <li><input type="checkbox" name="size" value="md" id="md"> <label for="md">M</label></li>
-              <li><input type="checkbox" name="size" value="lg" id="lg"> <label for="lg">L</label></li>
-              <li><input type="checkbox" name="size" value="xl" id="xl"> <label for="xl">XL</label></li>
-            </ol>
-          </fieldset>
-          <fieldset>
-            <legend>Ratings (at least)</legend>
-            <ol>
-              <li>
-                <input type="radio" name="rating" value="4" id="aboveFour">
-                <label for="aboveFour">
-                  <span class="material-icons">star</span><span class="material-icons">star</span><span
-                    class="material-icons">star</span><span class="material-icons">star</span><span
-                    class="material-icons">star_border</span>
-                </label>
-              </li>
-              <li>
-                <input type="radio" name="rating" value="3" id="aboveThree">
-                <label for="aboveThree">
-                  <span class="material-icons">star</span><span class="material-icons">star</span><span
-                    class="material-icons">star</span><span class="material-icons">star_border</span><span
-                    class="material-icons">star_border</span>
-                </label>
-              </li>
-              <li>
-                <input type="radio" name="rating" value="2" id="aboveTwo">
-                <label for="aboveTwo">
-                  <span class="material-icons">star</span><span class="material-icons">star</span><span
-                    class="material-icons">star_border</span><span class="material-icons">star_border</span><span
-                    class="material-icons">star_border</span>
-                </label>
-              </li>
-              <li>
-                <input type="radio" name="rating" value="1" id="aboveOne">
-                <label for="aboveOne">
-                  <span class="material-icons">star</span><span class="material-icons">star_border</span><span
-                    class="material-icons">star_border</span><span class="material-icons">star_border</span><span
-                    class="material-icons">star_border</span>
-                </label>
-              </li>
-            </ol>
-          </fieldset>
-        </form>
-      </div>
-
-      <div>
-        <form>
-          <fieldset>
-            <label for="sort">Show</label>
-            <select name="sort" id="sort">
-              <option value="price-high">Price, highest to lowest</option>
-              <option value="price-low">Price, lowest to highest</option>
-              <option value="newest">Newest releases</option>
-            </select>
-          </fieldset>
-        </form>
-      </div>
-    </section>
-
-    <section id="products" class="products">
-      <!-- <header>
-  <img src="img/img-02.jpg" alt="Product Image">
-</header> -->
-    </section>
+    <section id="products" class="products"></section>
   </main>
 
-
-
-
-
-
-  <footer>
-    <p>&copy; Copyright, 1991.</p>
-    <nav aria-label="Legal">
-      <ul>
-        <li><a href="#">Terms of Use</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Accessibility Policy</a></li>
-      </ul>
-    </nav>
-    <ul>
-      <li><a href="#"><span class="material-icons">face</span> Facebook</a></li>
-      <li><a href="#"><span class="material-icons">camera_alt</span> Instagram</a></li>
-      <li><a href="#"><span class="material-icons">alternate_email</span> Twitter</a></li>
-    </ul>
-  </footer>
-
-  <!-- [Remove all default comments in this document after reading] -->
 
   <script src="js/index.js"></script>
 </body>

@@ -15,14 +15,49 @@
 </head>
 
 <body>
+    <header class="header">
+        <!-- <ul class="top-header">
+          <li><a href="#">1</a></li>
+          <li><a href="#">1</a></li>
+        </ul> -->
+    
+        <nav class="menu-1">
+          <ul>
+            <li>
+              <a href="#">Category</a>
+              <ul>
+                <li><a href="#">Boots</a></li>
+                <li><a href="#">Flats</a></li>
+                <li><a href="#">Loafers</a></li>
+                <li><a href="#">Pumps</a></li>
+                <li><a href="#">Sneakers</a></li>
+              </ul>
+            </li>
+            <li><a href="#">About</a></li>
+          </ul>
+    
+          <a href="index.html" class="logo"><img src="img/logo-04.svg" alt="Logo La Paire" width="90px" height="90px"
+              viewBox="0 0 54 54"></a>
+    
+          <ul>
+            
+            <li><a href="index.html"><img src="img/account.svg" alt="signin logo"></a></li>
+            <li><a href="index.html"><img src="img/giftcard.svg" alt="giftcard logo"></a></li>
+          </ul>
+        </nav>
+      </header>
+
+      
+      
   <header>
     <h1>WOMEN’S SHOES</h1>
     <p>The Autumn/Winter 2019 women’s shoe collection. From the Union sneaker to runway pumps with crystal-embellished embroidery.</p>
 
     <form class="filters" id="filtersForm">
       
-      <label for="productName">Search by name:
-        <input type="text" name="find" id="productName">
+      <label for="productName" id="filtersForm">
+         <input type="text" name="find" id="productName">
+         <a href="index.html"><img src="img/search.svg" alt="signin logo"></a>
       </label>
 
 
@@ -37,15 +72,15 @@
         </select>
       </label>
 
-      <label>Heel Height:
+       <label> <!--Heel Height: -->
         <label>
-          All<input type="radio" name="semester" value="all" checked>
+         Women<input type="radio" name="gender" value="women" id="womenSize">
         </label>
         <label>
-          Mid Heel<input type="radio" name="semester" value="Fall 2019">
+          Men<input type="radio" name="gender" value="men" id="menSize">
         </label>
         <label>
-          High Heel<input type="radio" name="semester" value="Winter 2020">
+          Kids<input type="radio" name="gender" value="kids" id="kidsSize">
         </label>
       </label>
 
@@ -69,8 +104,8 @@
           <!-- <option value="none" disabled selected>-- Sort by --</option> -->
           <option value="nameAsc" selected>Name, A to Z</option>
           <option value="nameDesc">Name, Z to A</option>
-          <option value="weeksAsc">Weeks, Least to Most</option>
-          <option value="weeksDesc">Weeks, Most to Least</option>
+          <option value="priceAsc">Price, Lower to Higher</option>
+          <option value="priceDesc">Price, Higher to Lower</option>
         </select>
       </label>
     </header>

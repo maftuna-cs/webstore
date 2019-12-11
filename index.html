@@ -15,101 +15,98 @@
 </head>
 
 <body>
-    <header class="header">
-        <!-- <ul class="top-header">
-          <li><a href="#">1</a></li>
-          <li><a href="#">1</a></li>
-        </ul> -->
-    
-        <nav class="menu-1">
+  <header class="header">
+    <nav class="menu">
+      <!-- <ul>
+        <li>
+          <a href="#">Category</a>
           <ul>
-            <li>
-              <a href="#">Category</a>
-              <ul>
-                <li><a href="#">Boots</a></li>
-                <li><a href="#">Flats</a></li>
-                <li><a href="#">Loafers</a></li>
-                <li><a href="#">Pumps</a></li>
-                <li><a href="#">Sneakers</a></li>
-              </ul>
-            </li>
-            <li><a href="#">About</a></li>
+            <li><a href="#">Boots</a></li>
+            <li><a href="#">Flats</a></li>
+            <li><a href="#">Loafers</a></li>
+            <li><a href="#">Pumps</a></li>
+            <li><a href="#">Sneakers</a></li>
           </ul>
-    
-          <a href="index.html" class="logo"><img src="img/logo-04.svg" alt="Logo La Paire" width="90px" height="90px"
-              viewBox="0 0 54 54"></a>
-    
-          <ul>
-            
-            <li><a href="index.html"><img src="img/account.svg" alt="signin logo"></a></li>
-            <li><a href="index.html"><img src="img/giftcard.svg" alt="giftcard logo"></a></li>
-          </ul>
-        </nav>
-      </header>
+        </li>
+        <li><a href="#">About</a></li>
+      </ul>
 
-      
-      
-  <header>
-    <h1>WOMEN’S SHOES</h1>
-    <p>The Autumn/Winter 2019 women’s shoe collection. From the Union sneaker to runway pumps with crystal-embellished embroidery.</p>
+      <a href="index.html" class="logo"><img src="img/logo-04.svg" alt="Logo La Paire" viewBox="0 0 54 54"></a>
 
-    <form class="filters" id="filtersForm">
-      
-      <label for="productName" id="filtersForm">
-         <input type="text" name="find" id="productName">
-         <a href="index.html"><img src="img/search.svg" alt="signin logo"></a>
-      </label>
-
-
-      <label for="categoryName">Category:
-        <select name="categoryName" id="categoryName">
-          <option value="all" selected>All products</option>
-          <option value="boots">Boots</option>
-          <option value="flats">Flats</option>
-          <option value="loafers">Loafers</option>
-          <option value="pumps">Pumps</option>
-          <option value="sneakers">Sneakers</option>
-        </select>
-      </label>
-
-       <label> <!--Heel Height: -->
-        <label>
-         Women<input type="radio" name="gender" value="women" id="womenSize">
-        </label>
-        <label>
-          Men<input type="radio" name="gender" value="men" id="menSize">
-        </label>
-        <label>
-          Kids<input type="radio" name="gender" value="kids" id="kidsSize">
-        </label>
-      </label>
-
-
-      <!-- <div>
-        <button type="submit">Filter</button>
-      </div> -->
-    </form>
-
-    <div>
-      <button id="fallProducts">Load Fall 2019</button>
-      <button id="productView">Toggle Layout</button>
-    </div>
+      <ul>
+        <li><a href="index.html"><img src="img/account.svg" alt="signin logo"></a></li>
+        <li><a href="index.html"><img src="img/giftcard.svg" alt="giftcard logo"></a></li>
+      </ul> -->
+    </nav>
   </header>
 
+
+
   <main>
-    <header>
+    <section>
+      <article class="hero-img">
+        <img src="img/webBanner.png" alt="all shoes web banner image">
+      <h1 class="main-header">Featured Products</h1>
+      
+      </article>
+      <article>
+        <form class="filters" id="filtersForm">
+
+          <label for="productName" id="filtersForm">
+            <input type="text" name="find" id="productName">
+            <a href="index.html"><img src="img/search.svg" alt="signin logo"></a>
+          </label>
+          <label>
+            <!--Heel Height: -->
+            <label>
+              Women<input type="radio" name="gender" value="women" id="womenSize">
+            </label>
+            <label>
+              Men<input type="radio" name="gender" value="men" id="menSize">
+            </label>
+            <label>
+              Kids<input type="radio" name="gender" value="kids" id="kidsSize">
+            </label>
+
+
+            <label for="categoryName">Category:
+              <select name="categoryName" id="categoryName">
+                <option value="all" selected>All products</option>
+                <option value="boots">Boots</option>
+                <option value="flats">Flats</option>
+                <option value="loafers">Loafers</option>
+                <option value="pumps">Pumps</option>
+                <option value="sneakers">Sneakers</option>
+              </select>
+            </label>
+
+        </form>
+      </article>
+
+      <article>
+        <button id="fallProducts">Load Fall 2019</button>
+        <button id="productView">Toggle Layout</button>
+      </article>
+    </section>
+
+
+    <section>
       <h2>products <small id="numResults">(5 results)</small></h2>
-      <label for="sortOrder">Sort by:
-        <select name="sort" id="sortOrder" class="sort">
-          <!-- <option value="none" disabled selected>-- Sort by --</option> -->
-          <option value="nameAsc" selected>Name, A to Z</option>
-          <option value="nameDesc">Name, Z to A</option>
-          <option value="priceAsc">Price, Lower to Higher</option>
-          <option value="priceDesc">Price, Higher to Lower</option>
-        </select>
-      </label>
-    </header>
+      <article>
+        <label for="sortOrder">Sort by:
+          <select name="sort" id="sortOrder" class="sort">
+            <!-- <option value="none" disabled selected>-- Sort by --</option> -->
+            <option value="nameAsc" selected>Name, A to Z</option>
+            <option value="nameDesc">Name, Z to A</option>
+            <option value="priceAsc">Price, Lower to Higher</option>
+            <option value="priceDesc">Price, Higher to Lower</option>
+          </select>
+        </label>
+      </article>
+    </section>
+
     <section id="products" class="products"></section>
+
   </main>
 
 

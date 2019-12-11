@@ -1,7 +1,7 @@
 /******* GLOABL VARIABLES/DATA ********/
 
 const settings = {
-  notifySeatsRemaining: 5,
+  notifySeatsRemaining: 7,
   productsPerPage: 3,
   // imagePath: 'img/'
 }
@@ -20,7 +20,7 @@ const allProducts = [
     size: [35,36,37,38,39],
     qty: true,
     rating: 5,
-    category: null,
+    category: `loafers`,
   },{  // 1
     id: 102, 
     name: `Suede Chunky Heeled Ankle Boots`,
@@ -424,18 +424,17 @@ const getProductAsHtmlString = product => {
   }
 
   return `
-    <article class="product ${(product.category) ? `cat-${product.category}` : ''} ${soldout}">
+    <article class="product" ${(product.category) ? `cat-${product.category}` : ''} ${soldout}">
     <img src="${product.img}" alt="${product.name}" class="product-image">
-    <h3 id="name">${product.name} ${callout}</h3>
+    <h3 id="name" class="product-title">${product.name} ${callout}</h3>
       
       <ul class="product-info">
-      <li>Price: <strong>$${product.price}</strong></li>
-        <li>Colour: <strong>${product.color}</strong></li>
-        <li>Size: <strong>${product.size}</strong></li>
-        
-        <li>Available: <strong>${(product.qty) ? 'Yes' : 'No'}</strong></li>
-        
-        <li>Rating: <strong>${product.rating}</strong></li>
+      <li class="product-price"><strong>$${product.price}</strong></li>
+        <li class="product-color">Colour: <strong>${product.color}</strong></li>
+        <li class="product-size">Size: <strong>${product.size}</strong></li>
+         <li class="product-av">available: <strong>${(product.qty) ? 'Yes' : 'No'}</strong></li>
+         <li class="product-rate">rating: <strong>(${product.rating})</strong></li>
+        <li><button class="button-primary">Add to Bag</button>
       </ul>
       ${register}
     </article>`;

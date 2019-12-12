@@ -40,7 +40,9 @@
     </nav>
   </header>
 
-
+  <form>
+      <input type="text" name="find" id="productName">
+    </form>
 
   <main>
     <section>
@@ -54,11 +56,11 @@
 
           <label for="productName" id="filtersForm">
             <input type="text" name="find" id="productName">
-            <a href="index.html"><img src="img/search.svg" alt="signin logo"></a>
+            <a href="index.html"><img src="img/search.svg" alt="search logo"></a>
           </label>
-          <label>
-            <!--Heel Height: -->
-            <label>
+
+            <!-- gender: -->
+            <label id="productName">
               Women<input type="radio" name="gender" value="women" id="womenSize">
             </label>
             <label>
@@ -84,7 +86,7 @@
       </article>
 
       <article>
-        <button id="fallProducts">Load Fall 2019</button>
+        <button id="loadAllProducts">Load All Products</button>
         <button id="productView">Toggle Layout</button>
       </article>
     </section>
@@ -92,7 +94,7 @@
 
     <section>
       <h2>products <small id="numResults">(5 results)</small></h2>
-      <article>
+      <article class="sort-by">
         <label for="sortOrder">Sort by:
           <select name="sort" id="sortOrder" class="sort">
             <!-- <option value="none" disabled selected>-- Sort by --</option> -->

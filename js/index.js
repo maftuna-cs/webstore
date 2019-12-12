@@ -13,7 +13,7 @@ const shoppingCart = [
 const allProducts = [
   { // 0
     id: 101, 
-    name: `A Chevron Detail Point Toe Flat Loafers`,
+    name: `A Chevron Point Toe Flat Loafers`,
     img: `https://img.ltwebstatic.com/images3_pi/2019/11/07/15731206694c5f1df63ea8ba8d344656a9b372ff7d_thumbnail_900x.webp`,
     price: `45`,
     color: [`Khaki, Beige`],
@@ -30,12 +30,12 @@ const allProducts = [
     size: [35,36,37,38,39],
     qty: true,
     rating: 4,
-    category: `development`,
+    category: `boots`,
   },{ // 2
     id: 103, 
-    name: `Strap Ballet Flats`,
-    img: `img/img-02.jpg`,
-    price: `90`,
+    name: `Faux Pearl Ballet Flats`,
+    img: `https://img.ltwebstatic.com/images3_pi/2019/11/05/1572931532b48b44206c1d05865abe4b1e4d0874f9_thumbnail_900x.webp`,
+    price: `43`,
     color: [`Beige, Black`],
     size: [35,36,37,38,39],
     qty: false,
@@ -43,32 +43,32 @@ const allProducts = [
     category: `Flats`,
   },{ // 3
     id: 104, 
-    name: `Point Toe Embossed Stiletto Heels`,
-    img: `img/img-02.jpg`,
-    price: `90`,
+    name: `Embossed Stiletto Heels`,
+    img: `https://img.ltwebstatic.com/images3_pi/2019/11/09/1573292825cdf0071ab5e7b0b2588275ee7720d1b4_thumbnail_900x.webp`,
+    price: `65`,
     color: [`Beige, Black`],
     size: [35,36,37,38,39],
     qty: true,
-    rating: 4,
-    category: `flats`,
+    rating: 3,
+    category: `pumps`,
     available: 0
   },{ // 4
     id: 105, 
     name: `Metal Decor Flat Mules`,
     img: `https://img.ltwebstatic.com/images2_pi/2019/04/12/15550561893993284564_thumbnail_900x1199.webp`,
-    price: `90`,
+    price: `54`,
     color: [`Beige, Black`],
     size: [35,36,37,38,39],
     qty: true,
-    rating: 4,
-    category: `development`,
+    rating: 5,
+    category: `pumps`,
   },{
     id: 106, 
-    name: `Flat Loafers`,
-    img: `https://img.ltwebstatic.com/images2_pi/2019/07/15/1563187969227323736_thumbnail_900x1199.webp`,
-    price: `90`,
-    color: [`Black, Tan`],
-    size: [35,36,37,38,39],
+    name: `Men Lace-Up Sneakers`,
+    img: `https://img.ltwebstatic.com/images3_pi/2019/11/15/1573804711522b82bde9ae7adb7a7b6c8d0f9ec27c_thumbnail_900x.webp`,
+    price: `59`,
+    color: [`White`],
+    size: [40,41,42,43,44],
     qty: true,
     rating: 5,
     category: null,
@@ -115,14 +115,14 @@ const allProducts = [
   },
   { // 0
     id: 101, 
-    name: `Monogram Motif Leather Ankle Boots`,
-    img: `img/img-02.jpg`,
+    name: `Lace-Up Front Ankle Boots`,
+    img: `https://img.ltwebstatic.com/images3_pi/2019/11/23/15744866557b5e714ca3ec746372d84f35ae159fd4_thumbnail_900x.webp`,
     price: `90`,
     color: [`Black, Tan`],
-    size: [35,36,37,38,39],
+    size: [40,41,42,43,44],
     qty: true,
     rating: 5,
-    category: null,
+    category: `boots`,
   },{  // 1
     id: 102, 
     name: `Letter Graphic Lace-Up Front Chunky Sneakers`,
@@ -145,77 +145,76 @@ const allProducts = [
     category: `design`,
   },{ // 3
     id: 104, 
-    name: `Baby Girl Deer Design Faux Fur Lined Knit Boots`,
+    name: `Deer Design Faux Fur Boots`,
     img: `https://img.ltwebstatic.com/images3_pi/2019/11/06/157303094067574d17d46f92044b2b18427b2f15cf_thumbnail_900x.webp`,
-    price: `90`,
+    price: `42`,
     color: [`One Color`],
     size: [19,20,21],
     qty: true,
     rating: 4,
-    category: `design`,
+    category: `boots`,
     available: 0
   },{ // 4
     id: 105, 
     name: `Baby Girl Bow Decor Flats`,
     img: `https://img.ltwebstatic.com/images3_pi/2019/10/28/15722574028efca64a36ecf197b3d0f3173fea02f6_thumbnail_900x.webp`,
-    price: `90`,
+    price: `28`,
     color: [`Beige, Black`],
     size: [19,20,21],
     qty: true,
-    rating: 4,
-    category: `development`,
+    rating: 3,
+    category: `flats`,
   },{
     id: 106, 
     name: `Rhinestone & Bow Decor Glitter Flats`,
     img: `https://img.ltwebstatic.com/images3_pi/2019/11/21/157432133935dbe629ced96fbbf59575cdd26068f2_thumbnail_900x.webp`,
-    price: `90`,
+    price: `43`,
     color: [`Black, Tan`],
     size: [19,20,21],
     qty: true,
-    rating: 5,
+    rating: 4,
     category: 'flats',
   },{
     id: 107, 
     name: `Cartoon Embroidered Fluffy Flats`,
     img: `https://img.ltwebstatic.com/images3_pi/2019/09/25/1569400241a0fc38976f68ac85d48c9929b84a290f_thumbnail_900x.webp`,
-    price: `90`,
+    price: `32`,
     color: [`Black, Tan`],
     size: [35,36,37,38,39],
     qty: true,
     rating: 5,
-    category: null,
+    category: `boots`,
   },{
     id: 108, 
     name: `Double Strap Flat Loafers`,
     img: `https://img.ltwebstatic.com/images3_pi/2019/10/12/1570870578d104b7091eed877d2009361e4ff3ac90_thumbnail_900x.webp`,
-    price: `90`,
+    price: `78`,
     color: [`Black, Tan`],
     size: [35,36,37,38,39],
     qty: true,
-    rating: 5,
-    category: null,
+    rating: 2,
+    category: `pumps`,
   },{
     id: 106, 
     name: `Decor Point Toe Slingback Flats`,
     img: `https://img.ltwebstatic.com/images3_pi/2019/11/26/15747622365eb869ac4121c6b94765a1699f4e777f_thumbnail_900x.webp`,
-    price: `90`,
+    price: `39`,
     color: [`Black, Tan`],
     size: [35,36,37,38,39],
     qty: true,
-    rating: 5,
-    category: null,
+    rating: 3,
+    category: `flats`,
   },{
     id: 106, 
-    name: `Flat Loafers`,
-    img: `img/img-02.jpg`,
-    price: `90`,
+    name: `Plaid Wide Fit Slippers`,
+    img: `https://img.ltwebstatic.com/images3_pi/2019/11/11/1573466813cc67536d1ec8ad336c680b23c1fba2ee_thumbnail_900x.webp`,
+    price: `25`,
     color: [`Black, Tan`],
     size: [35,36,37,38,39],
     qty: true,
     rating: 5,
-    category: null,
+    category: `loafers`,
   }
- 
 ];
 
 
@@ -223,26 +222,14 @@ const allProducts = [
 
 
 const addItemToCart = productid => {
-  // [ {productid: 101, qty: 1} ]
 
   const cartItem = shoppingCart.find(item => item.productid == productid);
 
-  if (cartItem) {  // if a cartItem was found
+  if (cartItem) {  
     cartItem.qty++;
   } else {
     shoppingCart.push({productid: productid, qty: 1});
   }
-  
-  // if (this id already exist in the Array) {
-  //   Update the quantity of the item
-  // } else if (it does not exist) {
-  //   Add a new item to the shoppingCart
-  // }
-
-  // Is it important to return a value here? 
-  //    Why would we? Why not?
-  // What else might we need/want this function to do? 
-  //    If anything, weigh the pros/cons of doing it here vs elsewhere
 }
 
 // Sorting order function
@@ -360,6 +347,17 @@ function productsByGender(prod) {
 
 
 // EVENT HANDLER FUNCTIONS **************
+const loadProductsFromNameSearch = event => {
+
+  const whatToSearch = event.target.value.trim().toLowerCase();
+
+  const resultsFromSearch = allProducts.filter(c => c.name.toLowerCase().includes(whatToSearch));
+  
+  renderProductsFromArray(resultsFromSearch)
+  // String methods:  trim(), toUpperCase() or toLowerCase(), then includes()
+}
+
+
 
 // Change the product layout from grid to rows 
 const toggleProductView = event => {
@@ -368,7 +366,7 @@ const toggleProductView = event => {
 
 // If a product button was pressed
 const loadProductsFromTerm = event => {
-  const justFall2019 = allProducts.filter(c => c.start.term == `Winter` && c.start.year == 2020);
+  const justFall2019 = allProducts.filter(c => c.name == `Winter` && c.start.year == 2020);
   renderProductsFromArray(justFall2019);
 }
 
@@ -394,22 +392,16 @@ const submitTheFilterForm = event => {
 }
 
 // When sorting, ensure the filters run first (which leads to a render)
-const sortTheProducts = event => {
-  runTheFilter(document.getElementById('filtersForm'));
+const sortTheProducts = (event, productsArray) => {
+  // first is do the sort functionality
+  // render the results to the html page using renderProductsFromArray
+  const sortedProducts = loadProductsByOrder(productsArray, event.target.value);
+  renderProductsFromArray(sortedProducts);
 }
-
-
-// NOTE, COULD ALSO RUN THE FILTER FROM THE RENDER IF THE RENDER KNOWS WHICH FORM IT SHOULD CHECK FIRST
-// OR, COULD HAVE THE FORM SUBMIT AUTOMATICALLY WITH A SORT, WHICH IS POSSIBLY CLEANER
-
 
 
 // FUNCTIONS THAT BUILD OUR VIEW **************
 
-/*  Function: getproductAsHtmlString
-    Parameters: product:Object
-    Return: String of HTML (<article>)
-    Description: Allows our products to be built using a template (for map())  */
 const getProductAsHtmlString = product => {
 
   let callout = ``;
@@ -443,8 +435,8 @@ const getProductAsHtmlString = product => {
 const renderProductsFromArray = arr => {
 
   // 1. SORT!!!
-  const sortBy = document.getElementById('sortOrder').value;    // dropdown value
-  arr = loadProductsByOrder(arr, sortBy);  // sort the products, reassign the new Array
+  // const sortBy = document.getElementById('sortOrder').value;    // dropdown value
+  // arr = loadProductsByOrder(arr, sortBy);  // sort the products, reassign the new Array
 
   // 2. PAGINATE
     // How many pages do we need? 
@@ -480,15 +472,20 @@ const renderProductsFromArray = arr => {
 /************* EXECUTABLE *************/
 
 window.addEventListener('load', () => {
-
+  document.getElementById('productName').addEventListener('input', loadProductsFromNameSearch)
   // The product elements
   renderProductsFromArray(allProducts);
 
   // UI elements
   document.getElementById('productView').addEventListener('click', toggleProductView);
-  document.getElementById('fallProducts').addEventListener('click', loadProductsFromTerm);
+  document.getElementById('loadAllProducts').addEventListener('click', () => {
+    // clear the form data 
+    document.getElementById('filtersForm').reset();
+    // re-render all products to the html page
+    renderProductsFromArray(allProducts);
+  });
   document.getElementById('products').addEventListener('click', handleClickOfProducts);
-  document.getElementById('sortOrder').addEventListener('change', sortTheProducts);
+  document.getElementById('sortOrder').addEventListener('change', (event) => sortTheProducts(event, allProducts));
 
   // The filter form
   document.getElementById('filtersForm').addEventListener('submit', filterTheProducts);

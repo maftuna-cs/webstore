@@ -232,10 +232,10 @@ const addItemToCart = productid => {
   }
 }
 
-// Sorting order function
+// Sorting
 const loadProductsByOrder = (arrToSort, criteria) => {
 
-  const sortedProducts = arrToSort.slice(); // clone the array
+  const sortedProducts = arrToSort.slice(); 
 
   if (criteria == 'priceAsc') {
     // Smallest to largest
@@ -251,7 +251,7 @@ const loadProductsByOrder = (arrToSort, criteria) => {
     sortedProducts.sort((a, b) => b.name.localeCompare(a.name));
   }
 
-  return sortedProducts; // new array
+  return sortedProducts; 
 }
 
 // Filter
@@ -260,7 +260,7 @@ const runTheFilter = theForm => {
   const categoryToSearch = theForm.elements.categoryName.value;
   const nameToSearch = theForm.elements.productName.value;
   const genderToSearch = theForm.elements.gender.value;
-  // const semesterToSearch = theForm.elements.semester.value;
+  
 
   console.log(theForm.elements)
 
@@ -268,8 +268,7 @@ const runTheFilter = theForm => {
   const filteredproducts = allProducts
     .filter(c => c.name.toLowerCase().includes( nameToSearch.trim().toLowerCase() ))  // filter by name
     .filter(c => c.category == categoryToSearch || categoryToSearch == "all")         // filter by category
-    .filter(productsByGender, genderToSearch)         // filter by category
-    // .filter(c => `${c.start.term } ${c.start.year}` == semesterToSearch || semesterToSearch == "all");        // filter by semester
+    .filter(productsByGender, genderToSearch)         // filter by gender
     productsByGender
   renderProductsFromArray(filteredproducts);
 }
@@ -354,23 +353,17 @@ const loadProductsFromNameSearch = event => {
   const resultsFromSearch = allProducts.filter(c => c.name.toLowerCase().includes(whatToSearch));
   
   renderProductsFromArray(resultsFromSearch)
-  // String methods:  trim(), toUpperCase() or toLowerCase(), then includes()
+  
 }
 
 
 
-// Change the product layout from grid to rows 
+// Change the view 
 const toggleProductView = event => {
   document.getElementById('products').classList.toggle('grid-view');
 }
 
-// If a product button was pressed
-const loadProductsFromTerm = event => {
-  const justFall2019 = allProducts.filter(c => c.name == `Winter` && c.start.year == 2020);
-  renderProductsFromArray(justFall2019);
-}
 
-// If a "register" button is clicked
 const handleClickOfProducts = event => {
   if (!event.target.matches('button.product-register')) {
     return;
@@ -379,22 +372,19 @@ const handleClickOfProducts = event => {
   addItemToCart(productid);
 }
 
-// When the filter form itself is submit...
+
 const filterTheProducts = event => {
-  event.preventDefault(); // Prevent the submit form refreshing
+  event.preventDefault(); 
   runTheFilter(event.target);
 }
 
-// When a filter form component is submit...
+
 const submitTheFilterForm = event => {
-  //document.getElementById('filtersForm').submit();
   runTheFilter(event.target.form);
 }
 
-// When sorting, ensure the filters run first (which leads to a render)
+
 const sortTheProducts = (event, productsArray) => {
-  // first is do the sort functionality
-  // render the results to the html page using renderProductsFromArray
   const sortedProducts = loadProductsByOrder(productsArray, event.target.value);
   renderProductsFromArray(sortedProducts);
 }
@@ -434,38 +424,13 @@ const getProductAsHtmlString = product => {
 
 const renderProductsFromArray = arr => {
 
-  // 1. SORT!!!
-  // const sortBy = document.getElementById('sortOrder').value;    // dropdown value
-  // arr = loadProductsByOrder(arr, sortBy);  // sort the products, reassign the new Array
-
-  // 2. PAGINATE
-    // How many pages do we need? 
-    //  totalNumproducts / productsPerPage
-    //    Round this^ up to the next integer
-    
-    // TEST EXAMPLE:  10 products / 3 productsPerPage = 4 pages required
-    //    Page 1:   0, 1, 2
-    //    Page 2:   3, 4, 5
-    //    Page 3:   6, 7, 8
-    //    Page 4:   9
-
-    // Therefor...
-    // Index of the first product on each page: 
-    //    firstIndexOnThisPage = (pageNum - 1) * productsPerPage
-    // Index of the last product on each page:
-    //    lastIndexOnThisPage = firstIndexOnThisPage + productsPerPage
-    //      (Remember that slice() excludes the last index.)
-
-
-  // 3. BUILD OUTPUT
-  if (arr.length > 0) {
-    document.getElementById('products').innerHTML = arr.map(getProductAsHtmlString).join('\n'); // Print products  
-  } else {
-    document.getElementById('products').innerHTML = 'Sorry, no matching results.' // Woops!
-  }
-
-  document.getElementById('numResults').innerHTML = `(${arr.length} ${(arr.length == 1) ? 'result' : 'results'})`; // Display number of total results
   
+  if (arr.length > 0) {
+    document.getElementById('products').innerHTML = arr.map(getProductAsHtmlString).join('\n');  
+  } else {
+    document.getElementById('products').innerHTML = 'Sorry, no matching results.'
+  }
+  document.getElementById('numResults').innerHTML = `(${arr.length} ${(arr.length == 1) ? 'result' : 'results'})`;
 }
 
 
@@ -473,10 +438,10 @@ const renderProductsFromArray = arr => {
 
 window.addEventListener('load', () => {
   document.getElementById('productName').addEventListener('input', loadProductsFromNameSearch)
-  // The product elements
+  // allProducts
   renderProductsFromArray(allProducts);
 
-  // UI elements
+  // ui
   document.getElementById('productView').addEventListener('click', toggleProductView);
   document.getElementById('loadAllProducts').addEventListener('click', () => {
     // clear the form data 
@@ -499,5 +464,5 @@ window.addEventListener('load', () => {
 });
 
 
-// Still to discuss: Arrays within our products
+
 

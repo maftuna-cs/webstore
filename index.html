@@ -7,10 +7,10 @@
   <title>La Paire | Handcrafted Designer Shoes</title>
   <meta name="description"
     content="SHop La Paire for handcrafted, high quality shoes, including flats, pumps, sandals, boots, loafers and more for men, women and kids">
-  <meta name="author" content="[Your Name]">
-  <link rel="stylesheet" href="css/reset.css"> <!-- You may change this "Reset" to "Normalize" if preferred -->
+  <meta name="author" content="[Maftuna]">
+  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <!-- Material design icons are use below. Remove this line if using other font packs or images. Details on Material Design icons can be found here: https://material.io/resources/icons/ -->
+
   <link rel="stylesheet" href="css/test.css">
 </head>
 
@@ -40,61 +40,65 @@
     </nav>
   </header>
 
-  
-
   <main>
     <section>
       <article class="hero-img">
         <img src="img/banner.png" alt="all shoes web banner image">
-      <h1 class="main-header">Featured Products</h1>
+        <h1 class="main-header">Featured Products</h1>
       </article>
-   <article class="search">
+    </section>
+
+    <article class="search">
       <form>
-          <input type="text" name="find" placeholder="Search by name & category.." id="productName">
-        </form>
-      </article>
-
-      <article>
-        <form class="filters" id="filtersForm">
-         <label for="productName" id="filtersForm">
-            <input type="text" name="find" id="productName" class="search-hidden">
-          </label>
-
-            <!-- gender: -->
-            <label class="radio-btn" id="productName">
-              Women<input type="radio" name="gender" value="women" id="womenSize"><span class="radiomark"></span>
-            </label>
-            <label class="radio-btn">
-              Men<input type="radio" name="gender" value="men" id="menSize"><span class="radiomark"></span>
-            </label>
-            <label class="radio-btn">
-              Kids<input type="radio" name="gender" value="kids" id="kidsSize"><span class="radiomark"></span>
-            </label>
-
-
-            <label for="categoryName">Category:
-              <select name="categoryName" id="categoryName">
-                <option value="all" selected>All products</option>
-                <option value="boots">Boots</option>
-                <option value="flats">Flats</option>
-                <option value="loafers">Loafers</option>
-                <option value="pumps">Pumps</option>
-                <option value="sneakers">Sneakers</option>
-              </select>
-            </label>
-
-        </form>
-      </article>
-
-      <article>
-        <button id="loadAllProducts">Load All Products</button>
-        <button id="productView">Toggle Layout</button>
-      </article>
+        <input type="text" name="find" placeholder="Search by name & category.." id="productName">
+      </form>
+    </article>
     </section>
 
 
     <section>
-      <h2>products <small id="numResults">(5 results)</small></h2>
+
+      <form class="filters" id="filtersForm">
+        <label for="productName" id="filtersForm">
+          <input type="text" name="find" id="productName" class="search-hidden">
+        </label>
+
+        <!-- gender: -->
+        <label class="radio-btn" id="productName">
+          Women<input type="radio" name="gender" value="women" id="womenSize"><span class="radiomark"></span>
+        </label>
+        <label class="radio-btn">
+          Men<input type="radio" name="gender" value="men" id="menSize"><span class="radiomark"></span>
+        </label>
+        <label class="radio-btn">
+          Kids<input type="radio" name="gender" value="kids" id="kidsSize"><span class="radiomark"></span>
+        </label>
+
+
+        <label for="categoryName">Category:
+          <select name="categoryName" id="categoryName">
+            <option value="all" selected>All products</option>
+            <option value="boots">Boots</option>
+            <option value="flats">Flats</option>
+            <option value="loafers">Loafers</option>
+            <option value="pumps">Pumps</option>
+            <option value="sneakers">Sneakers</option>
+          </select>
+        </label>
+
+      </form>
+
+
+
+    </section>
+
+    <section>
+      <button id="loadAllProducts" class="btn">Click to Load Back All Products..</button>
+    </section>
+
+
+    <section>
+      <h2 class="search-result">showing <small id="numResults">20 products</small></h2>
       <article class="sort-by">
         <label for="sortOrder">Sort by:
           <select name="sort" id="sortOrder" class="sort">
@@ -106,6 +110,10 @@
           </select>
         </label>
       </article>
+    </section>
+
+    <section>
+      <button id="productView" class="button-primary">Change View</button>
     </section>
 
     <section id="products" class="products"></section>

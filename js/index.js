@@ -364,7 +364,7 @@ const toggleProductView = event => {
 
 
 const handleClickOfProducts = event => {
-  if (!event.target.matches('button.product-register')) {
+  if (!event.target.matches('button.product-add')) {
     return;
   }
   const productid = parseInt(event.target.dataset.productid);
@@ -395,13 +395,13 @@ const getProductAsHtmlString = product => {
 
   let callout = ``;
   let soldout = ``;
-  let register = `<button type="button" class="product-register" data-productid="${product.id}">Add to Bag</button>`;
+  let add = `<a href="index.html"><img src="../img/favorite_border-24px.svg" class="product-add" data-productid="${product.id}"></a>`;
   if (product.available <= 0) {
     callout = `<small class="callout">Sold out</small>`;
     soldout = `soldout`;
-    register = ``;
+    add = ``;
   } else if (product.available < settings.notifyAvailable) {
-    callout = `<small class="callout urgent">Limited seats remaining</small>`;
+    callout = `<small class="callout urgent">few items remaing</small>`;
   }
 
   return `
@@ -417,7 +417,7 @@ const getProductAsHtmlString = product => {
          <li class="product-rate">rating: <strong>(${product.rating})</strong></li>
         <li><button class="button-primary">Add to Bag</button>
       </ul>
-      ${register}
+      ${add}
     </article>`;
 }
 

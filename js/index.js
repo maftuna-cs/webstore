@@ -395,7 +395,7 @@ const getProductAsHtmlString = product => {
 
   let callout = ``;
   let soldout = ``;
-  let add = `<a href="index.html"><img src="../img/favorite_border-24px.svg" class="product-add" data-productid="${product.id}"></a>`;
+  let add = `<button><img src="../img/favorite_border-24px.svg" class="product-add" data-productid="${product.id}"></a></button>`;
   if (product.available <= 0) {
     callout = `<small class="callout">Sold out</small>`;
     soldout = `soldout`;

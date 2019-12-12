@@ -1,8 +1,7 @@
 /******* GLOABL VARIABLES/DATA ********/
 
 const settings = {
-  notifySeatsRemaining: 7,
-  productsPerPage: 3,
+  notifyAvailable: 7,
   // imagePath: 'img/'
 }
 
@@ -401,7 +400,7 @@ const getProductAsHtmlString = product => {
     callout = `<small class="callout">Sold out</small>`;
     soldout = `soldout`;
     register = ``;
-  } else if (product.available < settings.notifySeatsRemaining) {
+  } else if (product.available < settings.notifyAvailable) {
     callout = `<small class="callout urgent">Limited seats remaining</small>`;
   }
 

@@ -23,14 +23,14 @@ const allProducts = [
     category: `loafers`,
   },{  // 1
     id: 102, 
-    name: `Suede Chunky Heeled Ankle Boots`,
-    img: `img/img-02.jpg`,
-    price: `90`,
+    name: `Hollow-Out Velcro Flats`,
+    img: `https://img.ltwebstatic.com/images3_pi/2019/10/18/1571391782ea01bba33b681607dedf887b935c53f0_thumbnail_900x.webp`,
+    price: `32`,
     color: [`Beige, Black`],
-    size: [35,36,37,38,39],
+    size: [19,20,21],
     qty: true,
     rating: 4,
-    category: `boots`,
+    category: `flats`,
   },{ // 2
     id: 103, 
     name: `Faux Pearl Ballet Flats`,
@@ -62,7 +62,7 @@ const allProducts = [
     qty: true,
     rating: 5,
     category: `pumps`,
-  },{
+  },{ // 5
     id: 106, 
     name: `Men Lace-Up Sneakers`,
     img: `https://img.ltwebstatic.com/images3_pi/2019/11/15/1573804711522b82bde9ae7adb7a7b6c8d0f9ec27c_thumbnail_900x.webp`,
@@ -72,79 +72,79 @@ const allProducts = [
     qty: true,
     rating: 5,
     category: null,
-  },{
+  },{ // 6
     id: 107, 
     name: `Lmond Toe Side Goring Block Heel Ankle Boots`,
     img: `https://img.ltwebstatic.com/images2_pi/2019/08/01/15646517064065547572_thumbnail_900x1199.webp`,
-    price: `90`,
+    price: `75`,
     color: [`Black, Tan`],
     size: [35,36,37,38,39],
     qty: true,
     rating: 5,
     category: null,
-  },{
+  },{ // 7
     id: 108, 
     name: `Rhinestone & Pearl Decor Plaid Flats`,
     img: `https://img.ltwebstatic.com/images3_pi/2019/11/01/15725879729bd519b5c80256013d7e575f61fabe46_thumbnail_900x.webp`,
-    price: `90`,
+    price: `83`,
     color: [`Black, Tan`],
     size: [35,36,37,38,39],
     qty: true,
     rating: 5,
     category: null,
-  },{
-    id: 106, 
+  },{ // 8
+    id: 109, 
     name: `Studded Decor Point Toe Flats`,
     img: `https://img.ltwebstatic.com/images2_pi/2019/04/17/15554883673784057751_thumbnail_900x1199.webp`,
-    price: `90`,
+    price: `29`,
     color: [`Black, Tan`],
     size: [35,36,37,38,39],
     qty: true,
-    rating: 5,
+    rating: 3,
     category: null,
-  },{
-    id: 106, 
+  },{ // 9
+    id: 110, 
     name: `Faux Pearl Decor Buckle Strap Flats`,
     img: `https://img.ltwebstatic.com/images3_pi/2019/11/07/1573121904bbf3ee061cae0cc094c7b3284f1c1cd8_thumbnail_900x.webp`,
-    price: `90`,
+    price: `78`,
     color: [`Black, Tan`],
     size: [35,36,37,38,39],
     qty: true,
     rating: 5,
     category: null,
   },
-  { // 0
-    id: 101, 
+  { // 10
+    id: 111, 
     name: `Lace-Up Front Ankle Boots`,
     img: `https://img.ltwebstatic.com/images3_pi/2019/11/23/15744866557b5e714ca3ec746372d84f35ae159fd4_thumbnail_900x.webp`,
-    price: `90`,
+    price: `65`,
     color: [`Black, Tan`],
     size: [40,41,42,43,44],
     qty: true,
     rating: 5,
     category: `boots`,
-  },{  // 1
-    id: 102, 
+  },{  // 11
+    id: 112, 
     name: `Letter Graphic Lace-Up Front Chunky Sneakers`,
     img: `https://img.ltwebstatic.com/images3_pi/2019/11/08/15732185642ac0600aeb7b018542944946a30ac1d7_thumbnail_900x.webp`,
-    price: `90`,
+    price: `72`,
     color: [`Beige, Black`],
     size: [35,36,37,38,39],
     qty: true,
     rating: 4,
     category: `development`,
-  },{ // 2
-    id: 103, 
+  },{ // 12
+    id: 113, 
     name: `Toddler Girls Jewelled Decor Glitter Flats`,
     img: `https://img.ltwebstatic.com/images3_pi/2019/11/09/15732975501a3b61309626809b8b25041ca3e6ed22_thumbnail_900x.webp`,
-    price: `90`,
+    price: `38`,
     color: [`Beige, Black`],
     size: [35,36,37,38,39],
     qty: false,
-    rating: 4,
+    rating: 5,
     category: `design`,
-  },{ // 3
-    id: 104, 
+  },{ // 13
+    id: 114, 
     name: `Deer Design Faux Fur Boots`,
     img: `https://img.ltwebstatic.com/images3_pi/2019/11/06/157303094067574d17d46f92044b2b18427b2f15cf_thumbnail_900x.webp`,
     price: `42`,
@@ -154,8 +154,8 @@ const allProducts = [
     rating: 4,
     category: `boots`,
     available: 0
-  },{ // 4
-    id: 105, 
+  },{ // 14
+    id: 115, 
     name: `Baby Girl Bow Decor Flats`,
     img: `https://img.ltwebstatic.com/images3_pi/2019/10/28/15722574028efca64a36ecf197b3d0f3173fea02f6_thumbnail_900x.webp`,
     price: `28`,
@@ -164,8 +164,8 @@ const allProducts = [
     qty: true,
     rating: 3,
     category: `flats`,
-  },{
-    id: 106, 
+  },{ // 15
+    id: 116, 
     name: `Rhinestone & Bow Decor Glitter Flats`,
     img: `https://img.ltwebstatic.com/images3_pi/2019/11/21/157432133935dbe629ced96fbbf59575cdd26068f2_thumbnail_900x.webp`,
     price: `43`,
@@ -174,8 +174,8 @@ const allProducts = [
     qty: true,
     rating: 4,
     category: 'flats',
-  },{
-    id: 107, 
+  },{ // 16
+    id: 117, 
     name: `Cartoon Embroidered Fluffy Flats`,
     img: `https://img.ltwebstatic.com/images3_pi/2019/09/25/1569400241a0fc38976f68ac85d48c9929b84a290f_thumbnail_900x.webp`,
     price: `32`,
@@ -184,8 +184,8 @@ const allProducts = [
     qty: true,
     rating: 5,
     category: `boots`,
-  },{
-    id: 108, 
+  },{ // 17
+    id: 118, 
     name: `Double Strap Flat Loafers`,
     img: `https://img.ltwebstatic.com/images3_pi/2019/10/12/1570870578d104b7091eed877d2009361e4ff3ac90_thumbnail_900x.webp`,
     price: `78`,
@@ -194,8 +194,8 @@ const allProducts = [
     qty: true,
     rating: 2,
     category: `pumps`,
-  },{
-    id: 106, 
+  },{ // 18
+    id: 119, 
     name: `Decor Point Toe Slingback Flats`,
     img: `https://img.ltwebstatic.com/images3_pi/2019/11/26/15747622365eb869ac4121c6b94765a1699f4e777f_thumbnail_900x.webp`,
     price: `39`,
@@ -204,8 +204,8 @@ const allProducts = [
     qty: true,
     rating: 3,
     category: `flats`,
-  },{
-    id: 106, 
+  },{ // 19
+    id: 120, 
     name: `Plaid Wide Fit Slippers`,
     img: `https://img.ltwebstatic.com/images3_pi/2019/11/11/1573466813cc67536d1ec8ad336c680b23c1fba2ee_thumbnail_900x.webp`,
     price: `25`,

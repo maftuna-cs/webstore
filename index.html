@@ -10,7 +10,6 @@
   <meta name="author" content="[Maftuna]">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
   <link rel="stylesheet" href="css/test.css">
 </head>
 
@@ -31,10 +30,11 @@
         <li><a href="#">About</a></li>
       </ul>
 
-      <a href="index.html" class="logo"><img src="img/logo-04.svg" alt="Logo La Paire" viewBox="0 0 54 54"></a>
+      <a href="index.html" class="logo"><img src="img/logo-04.svg" alt="Logo La Paire" width="130px" height="130px"
+        viewBox="0 0 54 54"></a>
 
       <ul>
-        <li><a href="index.html"><img src="img/account.svg" alt="signin logo"></a></li>
+        <li><a href="index.html"><img src="img/account.svg" alt="signin logo" class="menu-icon"></a></li>
         <li><a href="index.html"><img src="img/giftcard.svg" alt="giftcard logo"></a></li>
       </ul>
     </nav>
@@ -75,7 +75,7 @@
         </label>
 
 
-        <label for="categoryName">Category:
+        <label  class="ctg" for="categoryName">Category:
           <select name="categoryName" id="categoryName">
             <option value="all" selected>All products</option>
             <option value="boots">Boots</option>
@@ -102,7 +102,6 @@
       <article class="sort-by">
         <label for="sortOrder">Sort by:
           <select name="sort" id="sortOrder" class="sort">
-            <!-- <option value="none" disabled selected>-- Sort by --</option> -->
             <option value="nameAsc" selected>Name, A to Z</option>
             <option value="nameDesc">Name, Z to A</option>
             <option value="priceAsc">Price, Lower to Higher</option>
@@ -113,12 +112,39 @@
     </section>
 
     <section>
-      <button id="productView" class="button-primary">Change View</button>
+      <button id="productView" class="view-btn">Change View</button>
     </section>
 
     <section id="products" class="products"></section>
+   </main>
 
-  </main>
+
+  <footer class="footer">
+     <section>
+        <h3>Please, Subscribe!</h3>
+        <form>
+          E-mail: <input type="email" name="emailaddress" placeholder="Enter your email.." class="email-input">
+          <input type="submit" class="email-sub">
+        </form>
+     </section>
+     <section> 
+       <nav aria-label="Legal">
+        <ul>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Accessibility Policy</a></li>
+        </ul>
+      </nav>
+    </section>
+      <section>
+        <li><a href="#"><span class="material-icons">face</span> Facebook</a></li>
+        <li><a href="#"><span class="material-icons">camera_alt</span> Instagram</a></li>
+        <li><a href="#"><span class="material-icons">alternate_email</span> Twitter</a></li>
+      </ul>
+    </section>
+    <section></section>
+       <!-- <p>&copy; Copyright, 1991.</p> -->
+    </footer>
 
 
   <script src="js/index.js"></script>

@@ -500,3 +500,4 @@ window.addEventListener('load', () => {
 
 
 // Still to discuss: Arrays within our products
+

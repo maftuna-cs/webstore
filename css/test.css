@@ -283,6 +283,7 @@ body {
     color: #585756;
     padding: 2em;
     text-align: center;
+    border-radius: .3125em 1.25em .3125em;
   }
   
   .product-register {
@@ -297,12 +298,13 @@ body {
     font-size: 1.2em;
     vertical-align: center;
     padding: 1em 2em;
-    border-radius: 2em;
+    border-radius: .3125em 1.25em .3125em;
     background-color: #c8d1bd;
     color: #585756;
   }
   .callout.urgent {
-    background-color: #f6abab;
+    background-color: #d67070;
+    border-radius: .3125em 1.25em .3125em;
   }
   .footer {
     background: hsl(87, 5%, 58%);

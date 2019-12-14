@@ -20,6 +20,7 @@ const allProducts = [
     qty: true,
     rating: 5,
     category: `loafers`,
+    available: 19,
   },{  // 1
     id: 102, 
     name: `Hollow-Out Velcro Flats`,
@@ -30,6 +31,7 @@ const allProducts = [
     qty: true,
     rating: 4,
     category: `flats`,
+    available: 2,
   },{ // 2
     id: 103, 
     name: `Faux Pearl Ballet Flats`,
@@ -40,6 +42,7 @@ const allProducts = [
     qty: false,
     rating: 4,
     category: `Flats`,
+    available: 5,
   },{ // 3
     id: 104, 
     name: `Embossed Stiletto Heels`,
@@ -50,7 +53,7 @@ const allProducts = [
     qty: true,
     rating: 3,
     category: `pumps`,
-    available: 0
+    available: 0,
   },{ // 4
     id: 105, 
     name: `Metal Decor Flat Mules`,
@@ -61,6 +64,7 @@ const allProducts = [
     qty: true,
     rating: 5,
     category: `pumps`,
+    available: 20,
   },{ // 5
     id: 106, 
     name: `Men Lace-Up Sneakers`,
@@ -70,7 +74,8 @@ const allProducts = [
     size: [40,41,42,43,44],
     qty: true,
     rating: 5,
-    category: null,
+    category: `sneakers`,
+    available: 0,
   },{ // 6
     id: 107, 
     name: `Lmond Toe Side Goring Block Heel Ankle Boots`,
@@ -80,7 +85,8 @@ const allProducts = [
     size: [35,36,37,38,39],
     qty: true,
     rating: 5,
-    category: null,
+    category: `boots`,
+    available: 6,
   },{ // 7
     id: 108, 
     name: `Rhinestone & Pearl Decor Plaid Flats`,
@@ -90,7 +96,8 @@ const allProducts = [
     size: [35,36,37,38,39],
     qty: true,
     rating: 5,
-    category: null,
+    category: `flats`,
+    available: 10,
   },{ // 8
     id: 109, 
     name: `Studded Decor Point Toe Flats`,
@@ -100,7 +107,8 @@ const allProducts = [
     size: [35,36,37,38,39],
     qty: true,
     rating: 3,
-    category: null,
+    category: `pumps`,
+    available: 14,
   },{ // 9
     id: 110, 
     name: `Faux Pearl Decor Buckle Strap Flats`,
@@ -110,7 +118,8 @@ const allProducts = [
     size: [35,36,37,38,39],
     qty: true,
     rating: 5,
-    category: null,
+    category: `pumps`,
+    available: 20,
   },
   { // 10
     id: 111, 
@@ -122,6 +131,7 @@ const allProducts = [
     qty: true,
     rating: 5,
     category: `boots`,
+    available: 3,
   },{  // 11
     id: 112, 
     name: `Letter Graphic Lace-Up Front Chunky Sneakers`,
@@ -131,7 +141,8 @@ const allProducts = [
     size: [35,36,37,38,39],
     qty: true,
     rating: 4,
-    category: `development`,
+    category: `sneakers`,
+    available: 4,
   },{ // 12
     id: 113, 
     name: `Toddler Girls Jewelled Decor Glitter Flats`,
@@ -141,7 +152,8 @@ const allProducts = [
     size: [35,36,37,38,39],
     qty: false,
     rating: 5,
-    category: `design`,
+    category: `flats`,
+    available: 11,
   },{ // 13
     id: 114, 
     name: `Deer Design Faux Fur Boots`,
@@ -152,7 +164,7 @@ const allProducts = [
     qty: true,
     rating: 4,
     category: `boots`,
-    available: 0
+    available: 0,
   },{ // 14
     id: 115, 
     name: `Baby Girl Bow Decor Flats`,
@@ -163,6 +175,7 @@ const allProducts = [
     qty: true,
     rating: 3,
     category: `flats`,
+    available: 32,
   },{ // 15
     id: 116, 
     name: `Rhinestone & Bow Decor Glitter Flats`,
@@ -173,6 +186,7 @@ const allProducts = [
     qty: true,
     rating: 4,
     category: 'flats',
+    available: 2,
   },{ // 16
     id: 117, 
     name: `Cartoon Embroidered Fluffy Flats`,
@@ -183,6 +197,7 @@ const allProducts = [
     qty: true,
     rating: 5,
     category: `boots`,
+    available: 0,
   },{ // 17
     id: 118, 
     name: `Double Strap Flat Loafers`,
@@ -193,6 +208,7 @@ const allProducts = [
     qty: true,
     rating: 2,
     category: `pumps`,
+    available: 15,
   },{ // 18
     id: 119, 
     name: `Decor Point Toe Slingback Flats`,
@@ -203,6 +219,7 @@ const allProducts = [
     qty: true,
     rating: 3,
     category: `flats`,
+    available: 19,
   },{ // 19
     id: 120, 
     name: `Plaid Wide Fit Slippers`,
@@ -213,6 +230,7 @@ const allProducts = [
     qty: true,
     rating: 5,
     category: `loafers`,
+    available: 7,
   }
 ];
 
@@ -356,7 +374,6 @@ const loadProductsFromNameSearch = event => {
 }
 
 
-
 // Change the view 
 const toggleProductView = event => {
   document.getElementById('products').classList.toggle('grid-view');
@@ -394,8 +411,8 @@ const sortTheProducts = (event, productsArray) => {
 const getProductAsHtmlString = product => {
 
   let callout = ``;
-  let soldout = ``;
-  let add = `<button><img src="../img/favorite_border-24px.svg" class="product-add" data-productid="${product.id}"></a></button>`;
+  let soldout = ``;  
+  let add = `<button class="button-primary" class="product-add" data-productid="${product.id}">Add to Bag</button>`;
   if (product.available <= 0) {
     callout = `<small class="callout">Sold out</small>`;
     soldout = `soldout`;
@@ -415,7 +432,6 @@ const getProductAsHtmlString = product => {
         <li class="product-size">Size: <strong>${product.size}</strong></li>
          <li class="product-av">available: <strong>${(product.qty) ? 'Yes' : 'No'}</strong></li>
          <li class="product-rate">rating: <strong>(${product.rating})</strong></li>
-        <li><button class="button-primary">Add to Bag</button>
       </ul>
       ${add}
     </article>`;
@@ -478,7 +494,8 @@ function responsiveMenu() {
 
 // add event listener to menu button
 let toggle = document.getElementById("menu-toggle");
-toggle.addEventListener("click", responsive, false);
+toggle.addEventListener("click", responsiveMenu, false);
 
 
+//// <button class="button-primary">Add to Bag</button>
 

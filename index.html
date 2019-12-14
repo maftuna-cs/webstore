@@ -16,115 +16,85 @@
 
 <body>
 
-    <header class="header">
-        <h1><a href="#"><img src="img/logo-original.png" alt="logo" class="logo"></a></h1>
-        <nav class="nav">
-            <a href="#" id="menu-toggle">MENU</a>
-            <!-- <a href="index.html" id="menu-toggle"><img src="img/reorder-24px.svg" alt="signin logo" class="menu-icon"></a> -->
-          <ul id="toggled">
-            <li>about</li>
-            <li>category</li>
-            <li>contact</li>
-            <li>blog</li>
-            <li>home</li>
-          </ul>
-        </nav>
-      </header>
-  <!-- <header class="header">
-    <h1 class="top-bar">free gift packaging</h1>
-    <nav class="menu">
-      <ul>
-        <li>
-          <a href="#">Category</a>
-          <ul>
-            <li><a href="#">Boots</a></li>
-            <li><a href="#">Flats</a></li>
-            <li><a href="#">Loafers</a></li>
-            <li><a href="#">Pumps</a></li>
-            <li><a href="#">Sneakers</a></li>
-          </ul>
-        </li>
-        <li><a href="#">About</a></li>
+  <header class="header">
+    <h1><a href="#"><img src="img/logo-original.png" alt="logo" class="logo"></a></h1>
+    <nav class="nav">
+      <a href="#" id="menu-toggle">MENU</a>
+      <!-- <a href="index.html" id="menu-toggle"><img src="img/reorder-24px.svg" alt="signin logo" class="menu-icon"></a> -->
+      <ul id="toggled">
+        <li>about</li>
+        <li>category</li>
+        <li>contact</li>
+        <li>blog</li>
+        <li>home</li>
       </ul>
+    </nav>
+  </header>
 
-      <a href="index.html" class="logo"><img src="img/logo-04.svg" alt="Logo La Paire" width="130px" height="130px"
-          viewBox="0 0 54 54"></a>
-
-      <ul>
-        <li><a href="index.html"><img src="img/account.svg" alt="signin logo" class="menu-icon"></a></li>
-        <li><a href="index.html"><img src="img/giftcard.svg" alt="giftcard logo"></a></li>
-      </ul>
-    </nav> -->
-  
 
   <main>
-    <!-- <section>
-      <article class="hero-img">
-        <img src="img/banner.png" alt="all shoes web banner image">
-        <h1 class="main-header">Featured Products</h1>
-      </article>
-    </section> -->
-    
-    
-    <section>
-        <article class="search">
-          <form>
-            <input type="text" name="find" placeholder="Search by name & category.." id="productName">
-          </form>
-        </article>
-        </section>
+    <!-- search, toggle, renew -->
+    <section class="extra-filters">
+      <div>
+        <button id="loadAllProducts" class="extra-filters--btn">Load Page</button>
+      </div>
 
-    <section>
+      <div>
+        <button id="productView" class="extra-filters--btn">Change View</button>
+      </div>
 
-        
+      <div class="search">
+        <form>
+          <input type="text" name="find" placeholder="Search" id="productName">
+        </form>
+      </div>
+    </section>
 
-      <form  id="filtersForm">
+    <!--  -->
+    <!--  -->
+    <!--  -->
 
-          
-              
-                <select name="categoryName" id="categoryName">
-                  <!-- <label class="ctg" for="categoryName">Category: -->
-                  <option value="all" selected>All products</option>
-                  <option value="boots">Boots</option>
-                  <option value="flats">Flats</option>
-                  <option value="loafers">Loafers</option>
-                  <option value="pumps">Pumps</option>
-                  <option value="sneakers">Sneakers</option>
-                </select>
-              </label>
-            
-          
-        <label for="productName" id="filtersForm">
-          <input type="text" name="find" id="productName" class="search-hidden">
-        
+    <!-- category list items -->
+    <form id="filtersForm">
+      <label for="productName" id="filtersForm">
+        <input type="text" name="find" id="productName" class="search-hidden">
+      </label>
 
-        <!-- gender:  <span class="radiomark"></span> class="radio-btn" -->
-        <div class="category-box">
-        <label  id="productName">
+      <!-- gender -->
+      <div class="category-box">
+        <label id="productName">
           <input type="radio" name="gender" value="women" id="womenSize">
           <img src="img/womens.png" alt="" class="voucher-img--women">
         </label>
-      
+
         <label>
-            <input type="radio" name="gender" value="kids" id="kidsSize">
-            <img src="img/kids.png" alt="" class="voucher-img--women">
-          </label>
+          <input type="radio" name="gender" value="kids" id="kidsSize">
+          <img src="img/kids.png" alt="" class="voucher-img--women">
+        </label>
         <label>
 
-        <input type="radio" name="gender" value="men" id="menSize">
-        <img src="img/mens.png" alt="" class="voucher-img--women">
+          <input type="radio" name="gender" value="men" id="menSize">
+          <img src="img/mens.png" alt="" class="voucher-img--women">
         </label>
-      </div>  
+      </div>
+
+      <select name="categoryName" id="categoryName" class="cat-drpdown">
+        <!-- <label class="ctg" for="categoryName">Category: -->
+        <option value="all" selected>All products</option>
+        <option value="boots">Boots</option>
+        <option value="flats">Flats</option>
+        <option value="loafers">Loafers</option>
+        <option value="pumps">Pumps</option>
+        <option value="sneakers">Sneakers</option>
+      </select>
     </form>
     </section>
-   
-   
 
-    <section>
-      <button id="loadAllProducts" class="btn">Click to Load Back All Products..</button>
-    </section>
+    <!--  -->
+    <!--  -->
+    <!--  -->
 
-
+    <!-- sort by -->
     <section>
       <h2 class="search-result">showing <small id="numResults">20 products</small></h2>
       <article class="sort-by">
@@ -139,14 +109,20 @@
       </article>
     </section>
 
-    <section>
-      <button id="productView" class="view-btn">Change View</button>
-    </section>
+    <!--  -->
+    <!--  -->
+    <!--  -->
 
+
+    <!-- product list -->
     <section id="products" class="products"></section>
   </main>
 
+  <!--  -->
+  <!--  -->
+  <!--  -->
 
+  <!-- footer -->
   <footer class="footer">
     <section class="footer-email">
       <h3>Sign Up for La Paire news!</h3>

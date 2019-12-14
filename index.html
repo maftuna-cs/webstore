@@ -58,54 +58,67 @@
   
 
   <main>
-    <section>
+    <!-- <section>
       <article class="hero-img">
         <img src="img/banner.png" alt="all shoes web banner image">
         <h1 class="main-header">Featured Products</h1>
       </article>
-    </section>
-
-
-    <article class="search">
-      <form>
-        <input type="text" name="find" placeholder="Search by name & category.." id="productName">
-      </form>
-    </article>
-    </section>
-
+    </section> -->
+    
+    
+    <section>
+        <article class="search">
+          <form>
+            <input type="text" name="find" placeholder="Search by name & category.." id="productName">
+          </form>
+        </article>
+        </section>
 
     <section>
 
-      <form class="filters" id="filtersForm">
+        
+
+      <form  id="filtersForm">
+
+          
+              
+                <select name="categoryName" id="categoryName">
+                  <!-- <label class="ctg" for="categoryName">Category: -->
+                  <option value="all" selected>All products</option>
+                  <option value="boots">Boots</option>
+                  <option value="flats">Flats</option>
+                  <option value="loafers">Loafers</option>
+                  <option value="pumps">Pumps</option>
+                  <option value="sneakers">Sneakers</option>
+                </select>
+              </label>
+            
+          
         <label for="productName" id="filtersForm">
           <input type="text" name="find" id="productName" class="search-hidden">
-        </label>
+        
 
-        <!-- gender: -->
-        <label class="radio-btn" id="productName">
-          Women<input type="radio" name="gender" value="women" id="womenSize"><span class="radiomark"></span>
+        <!-- gender:  <span class="radiomark"></span> class="radio-btn" -->
+        <div class="category-box">
+        <label  id="productName">
+          <input type="radio" name="gender" value="women" id="womenSize">
+          <img src="img/womens.png" alt="" class="voucher-img--women">
         </label>
-        <label class="radio-btn">
-          Men<input type="radio" name="gender" value="men" id="menSize"><span class="radiomark"></span>
-        </label>
-        <label class="radio-btn">
-          Kids<input type="radio" name="gender" value="kids" id="kidsSize"><span class="radiomark"></span>
-        </label>
+      
+        <label>
+            <input type="radio" name="gender" value="kids" id="kidsSize">
+            <img src="img/kids.png" alt="" class="voucher-img--women">
+          </label>
+        <label>
 
-
-        <label class="ctg" for="categoryName">Category:
-          <select name="categoryName" id="categoryName">
-            <option value="all" selected>All products</option>
-            <option value="boots">Boots</option>
-            <option value="flats">Flats</option>
-            <option value="loafers">Loafers</option>
-            <option value="pumps">Pumps</option>
-            <option value="sneakers">Sneakers</option>
-          </select>
+        <input type="radio" name="gender" value="men" id="menSize">
+        <img src="img/mens.png" alt="" class="voucher-img--women">
         </label>
-
-      </form>
+      </div>  
+    </form>
     </section>
+   
+   
 
     <section>
       <button id="loadAllProducts" class="btn">Click to Load Back All Products..</button>

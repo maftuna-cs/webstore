@@ -28,7 +28,7 @@ body {
   input[type=radio] {
     margin: 1em;
     }
-    
+
 /* HIDE RADIO */
   [type=radio] { 
     position: absolute;
@@ -84,11 +84,13 @@ body {
     padding: 1em 0 1em 1.4em;
     border-top: 1px grey solid;
     text-transform: uppercase;
+    margin-right: 3em; 
   } 
 
  .logo { 
   width: 8.125em;
   padding-left: .5em;
+  margin-left: 3em;
 }
 
 .main-header {
@@ -107,15 +109,16 @@ body {
 .search input[type=text] {
   width: 70%;
   box-sizing: border-box;
-  border: .125em solid #464655;
+  border: .125em solid #2d2d46;
   border-radius: .3em;
   font-size: 1em;
   background-color: #464655;
   background-image: url('../img/search.svg');
   background-position: .625em .625em; 
   background-repeat: no-repeat;
-  padding: .55em .2em .45em 3em;
+  padding: .43em .2em .43em 2em;
   color: white;
+  margin-left: 1em;
 }
 
 
@@ -135,16 +138,18 @@ body {
 }
   
   .category-box {
-    display: flex;
-    justify-content: space-evenly;
+    /* display: flex; */
+    text-align: center;
     background-color: var(--basiccolor);
-    padding: 1em;
+    
+    
   }
 
   .voucher-img--women {
     width: 320px;
     max-height: 320px;
-    object-fit: cover
+    object-fit: cover;
+    margin: .6em;
   }
 
   .radio-btn {
@@ -206,7 +211,8 @@ body {
 }
 
 .cat-drpdown {
-  margin-left: 2em;
+  margin-left: 3em;
+  margin-bottom: -6em;
 }
 .renew-btn {
   display: flex;
@@ -217,50 +223,45 @@ body {
   color: #464655;
 }
 
-
 .products {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1em;
-    margin: 2em;
-  }
-  
-  .product {
-    background-color: #fff;
-    padding: .5em;
-    overflow: hidden;
-    box-shadow: 0 0 1em rgba(0,0,0,0.2);
-    border-radius: .5em;
-    position: relative;
-    text-align: center;   
-  }
+  margin: 2em;
+}
 
-  .product-title {
-    color: var(--maincolor);
-    padding-top: 1em;
-  }
+.product {
+  background-color: #fff;
+  padding: .5em;
+  overflow: hidden;
+  box-shadow: 0 0 1em rgba(0,0,0,0.2);
+  border-radius: .5em;
+  position: relative;
+  text-align: center;   
+  margin-bottom: 1em;
+}
+.product-title {
+  color: var(--maincolor);
+  padding-top: 1em;
+}
 
-  .product-price {
-    font-size: 1.2em;
-    color: #585756; 
-  }
+.product-price {
+  font-size: 1.2em;
+  color: #585756; 
+}
 
-  .product-color,.product-size {
-    display: none;
-  }
+.product-color,.product-size {
+  display: none;
+}
 
-  .product-av {
-    color: #959a8f;
-  }
-  .product-rate {
-    color: #f6abab;
-  }
-  
- 
+.product-av {
+  color: #959a8f;
+}
+.product-rate {
+  color: #f6abab;
+}
+
   .sort-by {
     text-align: right;
     margin-right: 2em;
-  }
+  } */
 
   .ctg {
     font-size: 1.2em;
@@ -268,7 +269,7 @@ body {
 
   .button-primary {
     color: var(--basiccolor);
-    background-color: var(--maincolor);
+    background-color: #464655;
     border: none;
     border-radius: 2em;
     font-weight: bold;
@@ -357,7 +358,7 @@ body {
   
   
   
-  @media screen and (min-width: 40em) {
+  @media screen and (min-width: 41.25em) {
     .grid-view {
       grid-template-columns: 1fr 1fr 1fr;
     }
@@ -378,6 +379,80 @@ body {
       float: left;
       padding: 1em;
       border-top: none;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1em;
+      margin-left: 3em;
+      margin-right: 3em;
+    }
+    
+    .product {
+      background-color: #fff;
+      padding: .5em;
+      overflow: hidden;
+      box-shadow: 0 0 1em rgba(0,0,0,0.2);
+      border-radius: .5em;
+      position: relative;
+      text-align: center;   
+    }
+  
+    .product-title {
+      color: var(--maincolor);
+      padding-top: 1em;
+    }
+  
+    .product-price {
+      font-size: 1.2em;
+      color: #585756; 
+    }
+    .product-color,.product-size {
+      display: none;
+    }
+  
+    .product-av {
+      color: #959a8f;
+    }
+    .product-rate {
+      color: #f6abab;
+    }
+    .button-primary {
+      color: var(--basiccolor);
+      background-color: #464655;
+      border: none;
+      border-radius: 2em;
+      font-weight: bold;
+      font-size: 1em;
+      margin-bottom: 1.2em;
+      padding: .8em 2em;
+    }
+    .product.soldout {
+      box-shadow: none;
+      background-color: #c8d1bd;
+      color: #585756;
+      padding: 2em;
+      text-align: center;
+    }
+    
+    .product-register {
+      position: absolute;
+      top: 1em;
+      right: 1em;
+      display: none;
+    }
+    
+    .callout {
+      display: inline-block;
+      font-size: 1.2em;
+      vertical-align: center;
+      padding: 1em 2em;
+      border-radius: 2em;
+      background-color: #c8d1bd;
+      color: #585756;
+    }
+    .callout.urgent {
+      background-color: #f6abab;
     }
   }
   

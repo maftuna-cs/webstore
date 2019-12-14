@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:300,600');
 
 :root {
-  --maincolor: #cf9e76;
+  --color-beige: #cf9e76;
   --middlecolor: #959a8f;
-  --basiccolor: white;
+  --color-white: white;
+  --color-babypink: #f6abab;
+  --color-mint: #cf9e76;
+  --color-background: #cf9e76;
+  --color-lightkhaki: #cf9e76;
 }
 
 body {
@@ -12,9 +16,9 @@ body {
   font-weight: 400;   
   font-size: 1em;   
   line-height: 1.5;
-  background: #fff;    
+  background: var(--color-white);    
   color: #1c1818;
-  background-color: var(--basiccolor);
+  background-color: var(--color-white);
   }
   a {
     color: inherit;
@@ -22,7 +26,7 @@ body {
   } 
 
   ::placeholder {
-    color: white;
+    color: var(--color-white);
   }
 
   input[type=radio] {
@@ -43,7 +47,7 @@ body {
 
 /* CHECKED STYLES */
 [type=radio]:checked + img {
-  outline: 2px solid #f6abab;
+  outline: 2px solid var(--color-babypink);
 }
   
  
@@ -56,13 +60,13 @@ body {
   
   .header h1 {
     float: left;
-    color: white;
+    color: var(--color-white);
   }
   
   #menu-toggle {
     display: block;
     float: right;
-    color: white;
+    color: var(--color-white);
     text-decoration: none;
     padding: .75em;
     margin: 1em 1em 0 0;
@@ -71,7 +75,7 @@ body {
   .nav ul {
     clear: left;
     list-style-type: none;
-    color: white;
+    color: var(--color-white);
     padding-left: 0;
     margin-bottom: 0;
   }
@@ -109,7 +113,7 @@ body {
 .search input[type=text] {
   width: 70%;
   box-sizing: border-box;
-  border: .125em solid #2d2d46;
+  border: none;
   border-radius: .3em;
   font-size: 1em;
   background-color: #464655;
@@ -117,13 +121,13 @@ body {
   background-position: .625em .625em; 
   background-repeat: no-repeat;
   padding: .43em .2em .43em 2em;
-  color: white;
+  color: var(--color-white);
   margin-left: 1em;
 }
 
 
 .extra-filters--btn {
-  color: #fff;
+  color: var(--color-white);
   background-color: #464655;
   border: none;
   border-radius: .3em;
@@ -194,7 +198,7 @@ body {
 
 .btn {
 	background: #c8d1bd;
-	color: #fff;
+	color: var(--color-white);
 	width: 20%;
 	cursor: pointer;
 	font-family: "Noto Sans SC", sans-serif;
@@ -228,7 +232,7 @@ body {
 }
 
 .product {
-  background-color: #fff;
+  background-color: var(--color-white);
   padding: .5em;
   overflow: hidden;
   box-shadow: 0 0 1em rgba(0,0,0,0.2);
@@ -238,7 +242,7 @@ body {
   margin-bottom: 1em;
 }
 .product-title {
-  color: var(--maincolor);
+  color: var(--color-beige);
   padding-top: 1em;
 }
 
@@ -255,7 +259,7 @@ body {
   color: #959a8f;
 }
 .product-rate {
-  color: #f6abab;
+  color: var(--color-babypink);
 }
 
   .sort-by {
@@ -268,7 +272,7 @@ body {
   }
 
   .button-primary {
-    color: var(--basiccolor);
+    color: var(--color-white);
     background-color: #464655;
     border: none;
     border-radius: 2em;
@@ -307,13 +311,13 @@ body {
     border-radius: .3125em 1.25em .3125em;
   }
   .footer {
-    background: hsl(87, 5%, 58%);
+    background: #2d2d46;
     margin-top: 4em;
     text-align: center;
   }
 
   .footer-email {
-   color: var(--basiccolor);
+   color: var(--color-white);
   }
   .footer h3 {
     font-size: 1.5em;
@@ -327,7 +331,7 @@ body {
   }
 
   .email-sub {
-    background: var(--maincolor);
+    background: var(--middlecolor);
     padding: .4em 2em;
     border-radius: .8em;
     border: none;
@@ -336,7 +340,7 @@ body {
     display: flex;
     justify-content: center;
     text-decoration: inherit;
-    color: var(--basiccolor);
+    color: var(--color-white);
     margin-top: 2em;
     margin-bottom: 2em;
     
@@ -350,9 +354,9 @@ body {
   .footer-nav {
     display: flex;
     justify-content: space-evenly; 
-    background-color: #c8d1bd;
+    background-color: #464655;
     padding: 2em;
-    color: #585756;
+    color: var(--color-white);
     font-size: 1em;
   }
   
@@ -391,7 +395,7 @@ body {
     }
     
     .product {
-      background-color: #fff;
+      background-color:var(--color-white);
       padding: .5em;
       overflow: hidden;
       box-shadow: 0 0 1em rgba(0,0,0,0.2);
@@ -401,7 +405,7 @@ body {
     }
   
     .product-title {
-      color: var(--maincolor);
+      color: var(--color-beige);
       padding-top: 1em;
     }
   
@@ -417,10 +421,10 @@ body {
       color: #959a8f;
     }
     .product-rate {
-      color: #f6abab;
+      color: var(--color-babypink);
     }
     .button-primary {
-      color: var(--basiccolor);
+      color: var(--color-white);
       background-color: #464655;
       border: none;
       border-radius: 2em;
@@ -454,7 +458,7 @@ body {
       color: #585756;
     }
     .callout.urgent {
-      background-color: #f6abab;
+      background-color: var(--color-babypink);
     }
   }
   
